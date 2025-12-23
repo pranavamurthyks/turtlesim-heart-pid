@@ -94,7 +94,7 @@ class HeartPIDNode(Node):
 
         self.cmd_pub.publish(cmd)
 
-        self.t += 0.005
+        self.t += 0.01
 
 
 
