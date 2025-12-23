@@ -2,6 +2,14 @@
 
 This repository demonstrates how to draw a heart shape in ROS 2 Turtlesim using a PID controller. Instead of hardcoding waypoints, the turtle continuously tracks a mathematical heart curve and corrects its motion using feedback from its pose.
 
+## Demo
+
+<p align="center">
+  <img src="images/heart_demo.png" alt="Turtlesim Heart Demo" width="500"/>
+</p>
+
+<p align="center"><i>The turtle drawing a heart shape using PID control</i></p>
+
 ---
 
 ## Overview
@@ -60,19 +68,19 @@ heart_ws/
 
 1. **Start turtlesim:**
 ```bash
-   ros2 run turtlesim turtlesim_node
+ros2 run turtlesim turtlesim_node
 ```
 
 2. **Build the workspace:**
 ```bash
-   cd ~/heart_ws
-   colcon build
-   source install/setup.bash
+cd ~/heart_ws
+colcon build
+source install/setup.bash
 ```
 
 3. **Run the heart PID node:**
 ```bash
-   ros2 run heart_pkg heart_pid_exe
+ros2 run heart_pkg heart_pid_exe
 ```
 
 You should see the turtle drawing a heart.
