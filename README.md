@@ -53,13 +53,12 @@ PID allows smooth and stable tracking instead of jerky motion.
 
 ## Package Structure
 ```
-heart_ws/
-└── src/
-    └── heart_pkg/
-        ├── heart_pkg/
-        │   └── heart_pid_controller.py
-        ├── setup.py
-        └── package.xml
+heart_pkg/
+├── heart_pkg/
+│   └── heart_pid_controller.py
+├── setup.py
+├── package.xml
+└── README.md
 ```
 
 ---
@@ -73,6 +72,12 @@ ros2 run turtlesim turtlesim_node
 
 2. **Build the workspace:**
 ```bash
+# Create a workspace and clone this repository
+mkdir -p ~/heart_ws/src
+cd ~/heart_ws/src
+git clone <your-repo-url>
+
+# Build the workspace
 cd ~/heart_ws
 colcon build
 source install/setup.bash
