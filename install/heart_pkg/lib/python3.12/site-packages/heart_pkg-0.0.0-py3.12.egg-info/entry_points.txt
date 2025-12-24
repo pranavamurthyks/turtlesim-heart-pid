@@ -1,2 +1,0 @@
-[console_scripts]
-heart_pid_exe = heart_pkg.heart_pid_controller:main
