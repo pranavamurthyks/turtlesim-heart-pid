@@ -58,9 +58,13 @@ class HeartPIDNode(Node):
         x = 16 * (math.sin(self.t) ** 3)
         y = (13 * math.cos(self.t) - 5 * math.cos(2 * self.t) - 2 * math.cos(3 * self.t) - math.cos(4 * self.t))
 
-        # Scale + shift to turtlesim window
-        x = x / 16 * 4 + 5.5
-        y = y / 16 * 4 + 5.5
+        # Scale
+        x = x / 16 * 4
+        y = y / 16 * 4
+
+        # Shift so that heart top aligns with turtle start (5.5, 5.5)
+        x += 5.5
+        y += 5.5 - (5 / 16 * 4)
 
         return x, y
 
